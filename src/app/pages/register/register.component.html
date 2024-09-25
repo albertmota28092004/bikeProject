@@ -1,0 +1,42 @@
+<div class="register">
+    <h1 class="register_titles">Bisick</h1>
+    <h3 class="register_titles">Registrarse</h3>
+    <div class="register_inputs">
+      <form action="" method="post">
+        <div class="mb-3">
+          <label class="form-label">Cédula: </label>
+          <input class="form-control" type="text" ngModel="document" name="document" placeholder="Ingresa la cédula...">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Contraseña: </label>
+          <input class="form-control" type="password" ngModel="password" name="password"
+            placeholder="Ingresa la contraseña...">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Nombre Completo: </label>
+          <input class="form-control" type="text" ngModel="name" name="name"
+            placeholder="Ingresa tu nombre completo...">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Correo electrónico: </label>
+          <input class="form-control" type="email" ngModel="email" name="email"
+            placeholder="Ingresa tu correo electronico...">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Estrato socioeconómico: </label>
+          <input class="form-control" type="number" ngModel="stratum" name="stratum"
+            placeholder="Ingresa tu correo electronico...">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Rol: </label>
+            <select class="form-select" name="role" id="">
+                <option value="">Administrador</option>
+                <option value="">Usuario</option>
+            </select>
+        </div>
+        <div>
+          <button type="submit" class="btn register_buttom">Registrarse</button>
+        </div>
+      </form>
+    </div>
+  </div>

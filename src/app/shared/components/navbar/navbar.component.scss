@@ -1,0 +1,23 @@
+
+
+.navbar {
+    background-color: #03C010;
+    &_contenedor{
+        &_cerrar_sesion {
+            & i {
+                font-size: 30px;
+                color: #000;
+            }
+        }
+        &_info_usuario {
+            & i {
+                font-size: 30px;
+                color: #000;
+            }
+        }
+        & h1 {
+            display: block;
+        }
+    }
+}
+

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="navbar_contenedor container-fluid">
+    <div>
+      <ul class="navbar-nav ">
+        <li class="nav-item v">
+          <button routerLink="/home" class="nav-link">Inicio</button>
+        </li>
+        <li class="nav-item">
+          <button routerLink="/branch" class="nav-link">Bicicletas</button>
+        </li>
+        <li class="nav-item">
+          <button routerLink="/events" class="nav-link">Eventos</button>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <button class="btn navbar_contenedor_info_usuario">
+        <i class="bi bi-person-circle"></i>
+      </button>
+      <button class="btn navbar_contenedor_cerrar_sesion" data-bs-toggle="modal" data-bs-target="#cerrarSesionModal">
+        <i class="bi bi-box-arrow-in-right"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Cerrar Sesión Modal -->
+<div class="modal fade" id="cerrarSesionModal" tabindex="-1" aria-labelledby="cerrarSesionModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+      <div class="modal-body">
+          <p>
+              ¿Estás seguro de que quieres alquilar esta bicicleta?
+          </p>
+      </div>
+      <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+          <button routerLink="/"  class="btn btn-primary" data-bs-dismiss="modal">Cerrar Sesión</button>
+      </div>
+  </div>
+</div>

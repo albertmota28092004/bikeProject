@@ -1,0 +1,58 @@
+.bikes {
+    &_add {
+        color: white;
+        margin-top: 20px;
+        margin-left: 20px;
+        font-weight: bold;
+        background-color: #03C010;
+    }
+    & table {
+        margin-top: 30px;
+        margin-right: 50px;
+        &_select:hover {
+            background-color: #a0a0a0 !important;
+        }
+    }
+    & table, td{
+        border: 5px solid #ccc;
+    }
+    & .siguiente {
+        margin: 0 400px;
+        width: 500px; 
+    }
+}
+
+.modal-content {
+    width: 300px;
+    margin: 0 auto;
+    &_modal-body{
+        & form {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & div {
+                & input {
+                    width: 250px;
+                }
+                & select {
+                    width: 250px;
+                }
+            }
+            & button {
+                    width: 250px;
+                }
+        }
+    }
+}
+
+.modal_direccion {
+    gap: 20px;
+    & select, button  {
+        margin-top: 20px;
+    }
+    & button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,100 @@
+<app-navbar></app-navbar>
+<div class="bikes">
+    <button class="bikes_add btn" data-bs-toggle="modal" data-bs-target="#agregarBiciModal">Agregar bicicleta</button>
+
+    <table class="table table-responsive">
+        <thead>
+            <th>Marca</th>
+            <th>Estado</th>
+            <th>Color</th>
+            <th>Precio</th>
+            <th>Selección</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="marca">Suzuki</td>
+                <td class="estado">Disponible</td>
+                <td class="color">Azul</td>
+                <td class="precio">$ 50.000</td>
+                <td>
+                    <button type="button" class="btn" data-bs-toggle="button" aria-pressed="true">Seleccionar</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="marca">Suzuki</td>
+                <td class="estado">Disponible</td>
+                <td class="color">Azul</td>
+                <td class="precio">$ 50.000</td>
+                <td>
+                    <button type="button" class="btn" data-bs-toggle="button" aria-pressed="true">Seleccionar</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="marca">Suzuki</td>
+                <td class="estado">Disponible</td>
+                <td class="color">Azul</td>
+                <td class="precio">$ 50.000</td>
+                <td>
+                    <button type="button" class="btn" data-bs-toggle="button" aria-pressed="false">Seleccionar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="siguiente btn btn-primary" data-bs-toggle="modal" data-bs-target="#direccionModal">Siguiente</button>
+</div>
+
+<!-- Agregar Bicicleta Modal -->
+<div class="modal fade" id="agregarBiciModal" tabindex="-1" aria-labelledby="agregarBiciModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-body">
+            <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label">Marca: </label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Estado: </label>
+                    <select class="form-select" name="" id="">
+                        <option value="">Disponible</option>
+                        <option value="">Ocupada</option>
+                        <option value="">En mantenimiento</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Color: </label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Precio: </label>
+                    <input type="number" step="0,01" class="form-control" >
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar</button>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!-- Agregar Dirección Modal -->
+<div class="modal fade" id="direccionModal" tabindex="-1" aria-labelledby="direccionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-body">
+            <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal_direccion">
+                <h3>Seleccione el centro al que se dirige</h3>
+                <form action="">
+                    <div>
+                        <select class="form-select" name="" id="">
+                            <option value="">Centro de Diseño y Manufactura del Cuero</option>
+                            <option value="">Centro Tecnológico de Mobiliario</option>
+                        </select>
+                    </div>
+                    <button routerLink="/description" type="submit" class="btn btn-primary" data-bs-dismiss="modal">Siguiente</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

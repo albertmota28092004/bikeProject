@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="description">
+    <h1>Descripción</h1>
+        <h3 class="list-group-item">Bicicleta: Suzuki Azul</h3>
+        <h3 class="list-group-item">Precio: $ 50.000</h3>
+        <h3 class="list-group-item">Punto de recogida: Centro de Formación en Diseño, Confección y Moda</h3>
+        <h3 class="list-group-item">Punto de llegada: Centro de Diseño y Manufactura del Cuero</h3>
+    <br>
+    <br>
+    <br>
+    <button class="description_button btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmarAlquilerModal">Alquilar</button>
+</div>
+
+<!-- Confirmar Alquiler Modal -->
+<div class="modal fade" id="confirmarAlquilerModal" tabindex="-1" aria-labelledby="confirmarAlquilerLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+        <div class="modal-body">
+            <p>
+                ¿Estás seguro de que quieres alquilar esta bicicleta?
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+            <button (click)="bicicletaAlquilada()" routerLink="/home" class="btn btn-primary" data-bs-dismiss="modal">Alquilar</button>
+        </div>
+    </div>
+</div>
