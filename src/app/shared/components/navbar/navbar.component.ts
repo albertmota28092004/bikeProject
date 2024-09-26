@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BikesComponent } from '../../../pages/bikes/bikes.component';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,4 +10,11 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+
+  constructor(private router:Router){}
+
+  signOut() {
+    localStorage.removeItem('token')
+    this.router.navigate(['/']);
+  }
 }

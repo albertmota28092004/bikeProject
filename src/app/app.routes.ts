@@ -7,6 +7,7 @@ import { MapComponent } from './pages/map/map.component';
 import { HomeComponent } from './pages/home/home.component';
 import { EventsComponent } from './pages/events/events.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { UsersComponent } from './pages/users/users.component';
 
 export const routes: Routes = [
     {
@@ -16,6 +17,10 @@ export const routes: Routes = [
     {
         path: 'register',
         component: RegisterComponent
+    },
+    {
+        path: 'users',
+        component: UsersComponent
     },
     {
         path: 'home',

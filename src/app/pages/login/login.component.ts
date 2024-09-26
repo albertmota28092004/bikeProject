@@ -1,23 +1,33 @@
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { User } from '../../interfaces/user';
+import { LoginService } from '../../services/login/login.service';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, ReactiveFormsModule, FormsModule, HttpClientModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  cedula = 12345
-  contrasena = 12345
+  identityDocument = ''
+  password = ''
 
-  constructor(private router:Router){}
+  constructor(private loginService: LoginService, private router:Router){}
 
-  validar(cedula_usuario:number, contrasena_usuario:number) {
-    if (this.cedula == cedula_usuario && this.contrasena == contrasena_usuario) {
-      this.router.navigate(['home']);
-
+  validate() {
+    let user: User = {
+      identityDocument: this.identityDocument,
+      password: this.password,
     }
+
+    this.loginService.loginUser(user).subscribe((data:any) => {
+      console.log(data)
+      this.router.navigate(['home']);
+      localStorage.setItem('token', data.token)
+    })
   }
 }

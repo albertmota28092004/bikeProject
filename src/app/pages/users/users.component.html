@@ -1,0 +1,13 @@
+<div>
+    <h1>Usuarios</h1>
+    <div *ngFor="let user of users">
+        <p>
+            {{ user.identityDocument }}
+            {{ user.password }}
+            {{ user.name }}
+            {{ user.email }}
+            {{ user.stratum }}
+            {{ user.role }}
+        </p>
+    </div>
+</div>

@@ -5,18 +5,18 @@
     <form action="" method="post">
       <div class="mb-3">
         <label class="form-label">Cédula: </label>
-        <input class="form-control" type="text" ngModel="cedula" name="cedula" placeholder="Ingresa la cédula...">
+        <input class="form-control" type="text" name="identityDocument" placeholder="Ingresa la cédula..." [(ngModel)]="identityDocument">
       </div>
       <div class="mb-3">
         <label class="form-label">Contraseña: </label>
-        <input class="form-control" type="password" ngModel="contrasena" name="contrasena"
+        <input class="form-control" type="password" name="password" [(ngModel)]="password"
           placeholder="Ingresa la contraseña...">
       </div>
       <div>
         <label class="form-label">Si no te has registrado, <a class="register_link" routerLink="/register">hazlo ahora</a> </label>
       </div>
       <div>
-        <button type="submit" class="btn login_buttom" (click)="validar(cedula, contrasena)">Ingresar</button>
+        <button type="submit" class="btn login_buttom" (click)="validate()">Ingresar</button>
       </div>
     </form>
   </div>

@@ -11,6 +11,9 @@
         <li class="nav-item">
           <button routerLink="/events" class="nav-link">Eventos</button>
         </li>
+        <li class="nav-item">
+          <button routerLink="/events" class="nav-link">Centros</button>
+        </li>
       </ul>
     </div>
     <div>
@@ -38,7 +41,7 @@
       </div>
       <div class="modal-footer">
           <button class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-          <button routerLink="/"  class="btn btn-primary" data-bs-dismiss="modal">Cerrar Sesión</button>
+          <button (click)="signOut()" class="btn btn-primary" data-bs-dismiss="modal">Cerrar Sesión</button>
       </div>
   </div>
 </div>
